@@ -1,0 +1,20 @@
+--- levmar-2.6/Makefile.so.orig	2009-12-04 22:26:31.000000000 +0100
++++ levmar-2.6/Makefile.so	2013-01-24 20:04:49.481824471 +0100
+@@ -6,7 +6,7 @@
+ # major & minor shared lib numbers
+ MAJ=2
+ MIN=2
+-ODIR=sobj # where to place object files for shared lib
++ODIR=sobj
+ CC=gcc
+ CONFIGFLAGS=-ULINSOLVERS_RETAIN_MEMORY
+ #ARCHFLAGS=-march=pentium4 # YOU MIGHT WANT TO UNCOMMENT THIS FOR P4
+@@ -21,7 +21,7 @@
+ LIBS=$(LAPACKLIBS)
+ 
+ $(ODIR)/liblevmar.so.$(MAJ).$(MIN): $(LIBOBJS)
+-	$(CC) -shared -Wl,-soname,liblevmar.so.$(MAJ) -o $(ODIR)/liblevmar.so.$(MAJ).$(MIN) $(LIBOBJS) #-llapack -lblas -lf2c
++	$(CC) -shared -Wl,-soname,liblevmar.so.$(MAJ) -o $(ODIR)/liblevmar.so.$(MAJ).$(MIN) $(LIBOBJS) $(LAPACKLIBS)
+ 
+ # implicit rule for generating *.o files in ODIR from *.c files
+ $(ODIR)/%.o : %.c
