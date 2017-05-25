@@ -7,7 +7,7 @@ Summary:	LEVMAR - Levenberg-Marquardt non-linear least squares algorithm
 Summary(pl.UTF-8):	LEVMAR - nieliniowy algorytm najmniejszych kwadratów Levenberga-Marquardta
 Name:		levmar
 Version:	2.6
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://www.ics.forth.gr/~lourakis/levmar/%{name}-%{version}.tgz
