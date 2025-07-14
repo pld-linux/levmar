@@ -62,7 +62,7 @@ Statyczna biblioteka LEVMAR.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 # shared library (cmake suite doesn't support it)
